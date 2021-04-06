@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="Check Version" verbose="2" parallel="methods" thread-count="1" data-provider-thread-count="4">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+	</listeners>
+	<test verbose="2" name="Fire Extension Event" >
+		<classes>
+			<class name="com.browserextension.selenium.testsuites.BECheckVersion" >
+			    <methods>
+   				</methods>
+    		</class>
+		</classes>
+  	</test> 
+</suite> 

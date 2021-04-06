@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="Amazone" verbose="2" parallel="methods" thread-count="1" data-provider-thread-count="4">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		<listener class-name="com.uid.common.config.RetryListener"/>
+	</listeners>
+	<test verbose="2" name="Demo" >
+		<classes>
+			<class name="com.browserextension.selenium.testsuites.BEInstallationSuite" >
+			    <methods>
+   				</methods>
+    		</class>
+		</classes>
+  	</test>
+</suite>

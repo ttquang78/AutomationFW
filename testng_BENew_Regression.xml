@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="BE Regression" verbose="2" parallel="methods" thread-count="1" data-provider-thread-count="4">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.uid.common.config.RetryListener" />
+		<listener class-name="com.uid.common.config.TestListener" />
+		<listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+	</listeners>
+	<test verbose="2" name="BE" >
+		<parameter name="appName1" value="4imprint"/>
+		<parameter name="appURL1" value="https://www.4imprint.com/registration/login"/>
+		<parameter name="appData1"
+				   value="{'learned_xpath_username':'#Email','learned_doc_id_username':'-1','learned_xpath_password':'#Password','learned_doc_id_password':'-1','learned_xpath_click':'#btnSubmit','learned_doc_id_click':'-1'}"/>
+		<parameter name="appFDData1"
+				   value="{'learned_xpath_username':'#Email123','learned_doc_id_username':'-1','learned_xpath_password':'#Password','learned_doc_id_password':'-1','learned_xpath_click':'#btnSubmit','learned_doc_id_click':'-1'}"/>
+		<parameter name="appName2" value="Yardiasp14"/>
+		<parameter name="appURL2" value="https://www.yardiasp14.com/54118kandu/pages/Login.aspx"/>
+		<parameter name="appData2"
+				   value="{'learned_xpath_username':'#Username','learned_doc_id_username':'-1','learned_xpath_password':'#Password_Text','learned_doc_id_password':'-1','learned_xpath_click':'#cmdLogin','learned_doc_id_click':'-1'}"/>
+		<parameter name="appName3" value="Facebook"/>
+		<parameter name="appURL3" value="https://www.facebook.com/"/>
+		<parameter name="appData3"
+				   value="{'learned_xpath_username':'#email','learned_doc_id_username':'-1','learned_xpath_password':'#pass','learned_doc_id_password':'-1','learned_xpath_click':'INPUT[data-testid\u003d\u0027royal_login_button\u0027]','learned_doc_id_click':'-1'}"/>
+		<parameter name="appFDData3"
+				   value="{'learned_xpath_username':'#email123','learned_doc_id_username':'-1','learned_xpath_password':'#pass','learned_doc_id_password':'-1','learned_xpath_click':'INPUT[data-testid\u003d\u0027royal_login_button\u0027]','learned_doc_id_click':'-1'}"/>
+		<parameter name="appName4" value="google"/>
+		<parameter name="appURL4" value="https://www.google.com"/>
+		<parameter name="appData4"
+				   value="{'learned_xpath_username':'#Email','learned_doc_id_username':'-1','learned_xpath_password':'#Password','learned_doc_id_password':'-1','learned_xpath_click':'#btnSubmit','learned_doc_id_click':'-1'}"/>
+		<classes>
+			<class name="com.browserextension.selenium.testsuites.BESuite" />
+		</classes>
+  	</test> 
+</suite> 

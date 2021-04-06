@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="BE Legacy" verbose="2" parallel="methods" thread-count="1" data-provider-thread-count="4">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		<listener class-name="com.uid.common.config.RetryListener"/>
+		<listener class-name="com.uid.common.config.TestListener"/>
+	</listeners>
+	<test verbose="2" name="BE" >
+		<parameter name="appName1" value="Concur"/>
+		<parameter name="appURL1" value="https://www.concursolutions.com/nui/signin"/>
+		<parameter name="appData1"
+				   value="{'learned_xpath_username':'#userid','learned_xpath_username_xpath':'/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div/div[1]/div/input','learned_doc_id_username':'-1','learned_xpath_password':'#password','learned_xpath_password_xpath':'/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div/div[2]/div/input','learned_doc_id_password':'-1','learned_xpath_click':'#btnSubmit','learned_xpath_click_xpath':'/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div/div[3]/button','learned_doc_id_click':'-1'}"/>
+		<parameter name="appName2" value="Tripit"/>
+		<parameter name="appURL2" value="https://www.tripit.com/account/login"/>
+		<parameter name="appData2"
+				   value="{'learned_xpath_username':'DIV[class\u003d\u0027container\u0027] INPUT[id\u003d\u0027login_email_address\u0027]','learned_xpath_password':'DIV[class\u003d\u0027container\u0027] INPUT[id\u003d\u0027login_password\u0027]','learned_xpath_click':'DIV[class\u003d\u0027container\u0027] BUTTON[type\u003d\u0027submit\u0027]'}"/>
+
+		<groups>
+			<run>
+				<include name = "legacy" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.browserextension.selenium.testsuites.BELegacySuite" />
+		</classes>
+  	</test> 
+</suite> 
