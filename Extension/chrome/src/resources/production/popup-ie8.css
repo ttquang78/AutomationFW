@@ -1,0 +1,16 @@
+/* beta toggle */
+#pistachio-popup-body #pistachio-input-toggle {
+    border: 0;
+    border-right: 28px solid #4A627C;
+    width: 16px;
+}
+
+#pistachio-popup-body #pistachio-input-toggle.selected {
+    border-left: 17px solid #31BE6E;
+    border-right: 0;
+    margin-right: 21px;
+}
+
+#pistachio-input-toggle.selected:after {
+    left: 0;
+}

@@ -1,0 +1,3 @@
+"Zscaler","https://admin.zscaler.net/","{\"learned_xpath_click\": \"#login-panel-signin-button\", \"learned_xpath_password\": \"#login-panel-input-password\", \"learned_xpath_username\": \"#login-panel-input-email\"}"
+"Zscaler Cloud","https://admin.zscloud.net/","{\"learned_xpath_click\": \"#login-panel-signin-button\", \"learned_xpath_password\": \"#login-panel-input-password\", \"learned_xpath_username\": \"#login-panel-input-email\"}"
+"Zscaler One","https://admin.zscalerone.net/","{\"learned_xpath_click\": \"#login-panel-signin-button\", \"learned_xpath_password\": \"#login-panel-input-password\", \"learned_xpath_username\": \"#login-panel-input-email\"}"
